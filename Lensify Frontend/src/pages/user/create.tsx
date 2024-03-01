@@ -1,25 +1,25 @@
-import {useForm} from "react-hook-form";
-import {useMutation} from "@tanstack/react-query";
+import { useForm } from "react-hook-form";
+import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 
-function UserCreate(){
+function UserCreate() {
 
-    const {register,
+    const { register,
         handleSubmit,
-        formState}=useForm();
+        formState } = useForm();
 
-    const {errors}=formState;
+    const { errors } = formState;
 
-    const useApiCall=useMutation({
-        mutationKey:["POST_USER_CREATE"],
-        mutationFn:(payload:any)=>{
+    const useApiCall = useMutation({
+        mutationKey: ["POST_USER_CREATE"],
+        mutationFn: (payload: any) => {
             console.log(payload)
-            return axios.post("http://localhost:8080/users/save",payload)
+            return axios.post("http://localhost:8080/users/save", payload)
         }
     })
 
 
-    const onSubmit=(value:any)=>{
+    const onSubmit = (value: any) => {
         useApiCall.mutate(value)
     }
 
@@ -28,37 +28,37 @@ function UserCreate(){
         <form onSubmit={handleSubmit(onSubmit)}>
             <div>
                 <label>fullname</label>
-                <input type={"text"} {...register("fullName",{
-                    required:"full name is required"
-                })}/>
+                <input type={"text"} {...register("fullName", {
+                    required: "full name is required"
+                })} />
                 <p>{errors?.fullName?.message}</p>
             </div>
             <div>
                 <label>username</label>
-                <input type={"text"} {...register("username")}/>
+                <input type={"text"} {...register("username")} />
             </div>
             <div>
                 <label>password</label>
-                <input type={"password"} {...register("password")}/>
+                <input type={"password"} {...register("password")} />
             </div>
 
             <div>
                 <label>email</label>
-                <input type={"email"} {...register("email")}/>
+                <input type={"email"} {...register("email")} />
             </div>
 
             <div>
                 <label>mobileNo</label>
-                <input type={"text"} {...register("mobileNo")}/>
+                <input type={"text"} {...register("mobileNo")} />
             </div>
 
 
             <div>
                 <label>role</label>
-                <input type={"text"} {...register("role")}/>
+                <input type={"text"} {...register("role")} />
             </div>
             <div>
-                <input type={"submit"}/>
+                <input type={"submit"} />
             </div>
         </form>
     </>)

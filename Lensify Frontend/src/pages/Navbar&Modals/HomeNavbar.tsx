@@ -1,4 +1,4 @@
-import logo from "../../images/Feast logo 8small-PhotoRoom.png-PhotoRoom.png";
+import logo from "../../images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import { FaCartArrowDown, FaQuestionCircle, FaRegWindowClose, FaUser } from "react-icons/fa";
@@ -302,7 +302,7 @@ const HomeNavbar: React.FC<HomeNavbarProps> = ({ activePage }) => {
         <>
             <div className={"nav-bar"}>
                 <div className={"feast-logo"}>
-                    <img src={logo} width={"40px"} />
+                    <img src={logo} width={"100px"} />
                 </div>
                 <div className={"home-options"}>
                     <ul>
@@ -317,14 +317,14 @@ const HomeNavbar: React.FC<HomeNavbarProps> = ({ activePage }) => {
                     {user ? (
                         <Link to={"/cart"}>
                             <span className={"icon-cart"}>
-                                <FaCartArrowDown style={{ fontSize: "1.2rem", marginBottom: "-6px", marginRight: "10px" }} />
+                                <FaCartArrowDown style={{ fontSize: "2rem", marginBottom: "-6px", marginRight: "10px" }} />
                                 <h6 className={"icon-cart-number"}>{cartData?.data.length}</h6>
                             </span>
                         </Link>
                     ) : (
                         <span className={"unclickable-cart-icon"} onClick={() => alert("Please sign in to access the cart.")}>
                             <span className={"icon-cart"}>
-                                <FaCartArrowDown style={{ fontSize: "1.2rem", marginBottom: "-6px", marginRight: "10px", color: "gray" }} />
+                                <FaCartArrowDown style={{ fontSize: "3rem", marginBottom: "-6px", marginRight: "10px", color: "gray" }} />
                             </span>
                         </span>
                     )}
@@ -361,7 +361,7 @@ const HomeNavbar: React.FC<HomeNavbarProps> = ({ activePage }) => {
                                         {...register("email")}
                                     />
                                 </div>
-                                <span className={"iconpassword"}><RiLockPasswordFill /></span>
+                                <span className={"iconpassword"}></span>
                                 <div className={"password"}>
                                     <input
                                         type={"password"}

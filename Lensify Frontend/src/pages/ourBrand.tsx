@@ -10,7 +10,7 @@ import axios from "axios";
 interface Menu {
     category: {
         name: string;
-    };
+    }
 }
 
 const OurBrand: React.FC = () => {

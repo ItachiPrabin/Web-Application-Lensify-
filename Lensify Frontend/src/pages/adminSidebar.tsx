@@ -18,8 +18,7 @@ interface AdminSidebarProps {
 
 const AdminSidebar: React.FC<AdminSidebarProps> = ({ activePage }) => {
     const handleLogout = () => {
-        // Perform logout actions here, such as clearing session data or performing API requests
-        // Redirect the user to the homepage using a Link component
+
     };
 
     return (

@@ -6,7 +6,7 @@
 
 .nav-bar {
     display: flex;
-    background-color: rgb(150, 182, 197);
+    background-color: rgb(146, 144, 195);
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
     justify-content: space-between;

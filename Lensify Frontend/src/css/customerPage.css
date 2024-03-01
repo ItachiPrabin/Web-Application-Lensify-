@@ -1,11 +1,10 @@
-
-.customer-page{
-    background: #f6f4ef;
+.customer-page {
+    background: rgb(83, 92, 145);
     min-height: 100vh;
     overflow-x: hidden;
 }
 
-.customer-page-header{
+.customer-page-header {
     display: flex;
     height: 12vh;
     width: 79vw;
@@ -13,34 +12,35 @@
     align-items: center;
     padding: 1rem 1.5rem;
     margin-top: 4px;
-    background-color: white;
+    background-color: rgb(146, 144, 195);
     border-radius: 14px;
-    box-shadow: 10px 10px 10px -1px rgba(119, 111, 93, 0.52);
+    box-shadow: 10px 10px 10px -1px rgb(83, 92, 145);
 }
-.customer-page-header h1{
+
+.customer-page-header h1 {
     font-size: 1.8rem;
 }
-.customer-page-right{
+
+.customer-page-right {
     /*width: 79vw;*/
     position: relative;
     margin-left: 19.7vw;
 }
 
-.id-box3{
+.id-box3 {
     min-width: 6rem;
 }
-.name-box3{
+
+.name-box3 {
     min-width: 18rem;
 }
 
-.no-of-customer{
+.no-of-customer {
     margin-top: 1rem;
     padding: 2vh 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background-color: #312e2e;*/
 }
-.no-of-customer h2{
 
-}
+.no-of-customer h2 {}

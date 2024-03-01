@@ -1,3 +1,4 @@
+/* Base styles */
 * {
     margin: 0;
     padding: 0;
@@ -15,35 +16,35 @@ html {
 }
 
 .home-page {
-    /* background-image: url("");
-    width: 100vw;
-    height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat; */
     background-color: rgb(242, 239, 229);
 }
 
-.hp-first-div {
-    width: 100vw;
-    overflow-x: hidden;
-}
-
+.hp-first-div,
 .hp-second-div {
     width: 100vw;
-    /*background: #faf7f2;*/
-    padding-bottom: 5vh;
+    overflow-x: hidden;
 }
 
 .hp-main-container {
     display: flex;
     flex-direction: column;
-    /*background-color: #312e2e;*/
     align-items: center;
     justify-content: center;
     padding-bottom: 5vh;
     height: 55vh;
     z-index: 99;
+}
+
+.image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.centered-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .feast-slogan {
@@ -55,7 +56,6 @@ html {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
 }
 
 .feast-slogan h1 {
@@ -72,8 +72,8 @@ html {
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    margin-top: -300px;
     position: relative;
+    margin-top: -300px;
 }
 
 .hp-search-wrapper span {
@@ -107,8 +107,6 @@ html {
     background-color: #faf7f2;
 }
 
-
-
 .view-more-btn {
     display: flex;
     justify-content: center;
@@ -124,7 +122,6 @@ html {
     align-items: center;
     overflow: hidden;
     position: relative;
-    /*background-color: #faf7f2;*/
 }
 
 .img-container {
@@ -136,7 +133,6 @@ html {
     justify-content: center;
     align-items: center;
     transition: 1s;
-    /*background-color: #312e2e;*/
 }
 
 .slide_div {
@@ -150,7 +146,6 @@ html {
     position: relative;
     height: 40vh;
     width: 15vw;
-    /*filter: saturate(10%);*/
     object-fit: cover;
     transition: 0.7s;
     background-color: rgba(0, 0, 0, 0.4);
@@ -162,7 +157,6 @@ html {
     height: 40vh;
     width: 15vw;
     transition: 0.7s;
-    /*background-color: rgba(0, 0, 0, 0.4);*/
     background-color: rgba(0, 0, 0, 0);
     border-radius: 20px;
 }
@@ -171,86 +165,47 @@ html {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-#slider1:target~.imgContainer #img1,
-#slider1:target~.imgContainer #button1 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .feast-slogan {
+        font-size: 1.2rem;
+    }
+
+    .hp-search-wrapper {
+        width: 70vw;
+    }
+
+    .hp-search-wrapper span {
+        font-size: 3vw;
+    }
+
+    .hp-search-wrapper input {
+        font-size: 1rem;
+    }
+
+    .view-more-btn {
+        margin-top: 10vh;
+    }
 }
 
-#slider2:target~.imgContainer #img2,
-#slider2:target~.imgContainer #button2 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+@media screen and (max-width: 576px) {
+    .feast-slogan {
+        font-size: 1rem;
+    }
 
-#slider3:target~.imgContainer #img3,
-#slider3:target~.imgContainer #button3 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+    .hp-search-wrapper {
+        width: 80vw;
+    }
 
-#slider4:target~.imgContainer #img4,
-#slider4:target~.imgContainer #button4 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+    .hp-search-wrapper span {
+        font-size: 4vw;
+    }
 
-#slider5:target~.imgContainer #img5,
-#slider5:target~.imgContainer #button5 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
+    .hp-search-wrapper input {
+        font-size: 0.9rem;
+    }
 
-#slider6:target~.imgContainer #img6,
-#slider6:target~.imgContainer #button6 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider7:target~.imgContainer #img7,
-#slider7:target~.imgContainer #button7 {
-    width: 23vw;
-    height: 60vh;
-    background-color: transparent;
-    filter: saturate(100%);
-}
-
-#slider1:target~.imgContainer {
-    left: 60%;
-}
-
-#slider2:target~.imgContainer {
-    left: 40%;
-}
-
-#slider3:target~.imgContainer {
-    left: 20%;
-}
-
-#slider4:target~.imgContainer {
-    left: 0%;
-}
-
-#slider5:target~.imgContainer {
-    left: -20%;
-}
-
-#slider6:target~.imgContainer {
-    left: -40%;
-}
-
-#slider7:target~.imgContainer {
-    left: -60%;
+    .view-more-btn {
+        margin-top: 8vh;
+    }
 }

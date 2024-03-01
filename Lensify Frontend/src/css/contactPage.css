@@ -5,13 +5,12 @@
     overflow-x: hidden;
 }
 
-
 .get-container {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin-top: 10px; */
-    margin-bottom: 0.2px;
+    margin-bottom: 20px;
+    /* Increased margin for better spacing */
 }
 
 .get-container h2 {
@@ -20,11 +19,8 @@
     color: #443f3f;
 }
 
-
-
 .contact-main-content {
     width: 100%;
-    height: calc(100% - 100px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,34 +30,68 @@
     background: white;
     display: flex;
     flex-direction: column;
-    padding: 40px 50px;
-    width: 42vw;
+    padding: 20px;
+    /* Decreased padding for better spacing */
+    width: 80%;
+    /* Adjusted width for better responsiveness */
+    max-width: 600px;
+    /* Added max-width to prevent overflow on smaller screens */
     box-shadow: 5px 5px 10px -1px rgba(10, 99, 169, 0.16);
     margin: 5px;
-    font-size: 2vw;
+    font-size: 16px;
+    /* Adjusted font-size for better readability */
 }
 
 .email-phone-content {
-    margin-top: 25px;
-    display: flex;
-    justify-content: space-between;
+    margin-top: 15px;
+    /* Decreased margin-top for better spacing */
     padding-right: 10px;
     border-bottom: 1px solid #918886;
 }
 
 .email-phone-content h4 {
     color: #817373;
-    padding-bottom: 15px;
-    font-size: 1.2vw;
+    margin-bottom: 5px;
+    /* Adjusted margin for better spacing */
+    font-size: 1.2rem;
+    /* Adjusted font-size for better readability */
 }
 
 .email-phone-content h5 {
     color: #f3ad16;
-    font-size: 1.3vw;
+    font-size: 1.3rem;
+    /* Adjusted font-size for better readability */
 }
 
 .email-phone-content h6 {
     font-size: 1rem;
     font-family: Afacad;
     color: rgba(0, 0, 0, 0.76);
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .get-container h2 {
+        font-size: 2rem;
+        /* Adjusted font-size for smaller screens */
+    }
+
+    .our-contact {
+        width: 90%;
+        /* Adjusted width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .get-container h2 {
+        font-size: 1.5rem;
+        /* Further adjusted font-size for even smaller screens */
+    }
+
+    .our-contact {
+        width: 100%;
+        /* Adjusted width for even smaller screens */
+        padding: 15px;
+        /* Decreased padding for even smaller screens */
+    }
 }
